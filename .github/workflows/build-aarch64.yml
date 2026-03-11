@@ -1,6 +1,21 @@
 name: Build aarch64
 
 on:
+  workflow_dispatch:
+    inputs:
+      PROJECT:
+        description: "Project"
+        required: true
+        default: "Rocknix"
+      DEVICE:
+        description: "Device"
+        required: true
+        default: "odin2"
+      OWNER_LC:
+        description: "Owner"
+        required: true
+        default: "test"
+
   workflow_call:
     inputs:
       PROJECT:

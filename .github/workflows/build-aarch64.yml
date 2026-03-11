@@ -1,32 +1,9 @@
 name: Build aarch64
 
 on:
-  workflow_dispatch:
-    inputs:
-      PROJECT:
-        description: "Project"
-        required: true
-        default: "Rocknix"
-      DEVICE:
-        description: "Device"
-        required: true
-        default: "odin2"
-      OWNER_LC:
-        description: "Owner"
-        required: true
-        default: "test"
-
-  workflow_call:
-    inputs:
-      PROJECT:
-        required: true
-        type: string
-      DEVICE:
-        required: true
-        type: string
-      OWNER_LC:
-        required: true
-        type: string
+  push:
+    branches:
+      - rocknix-38f32c5
 
 jobs:
   build-aarch64:
